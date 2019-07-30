@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 03:08:55 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/07/26 04:50:41 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/07/29 16:47:47 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,25 @@ int		main()
 {
 	struct Node* head = NULL;
 	struct Node* second = NULL;
-//	struct Node* third = NULL;
-//	struct Node* fourth = NULL;
+	struct Node* third = NULL;
+	struct Node* fourth = NULL;
 
 	head = (struct Node*)malloc(sizeof(struct Node));
 	second = (struct Node*)malloc(sizeof(struct Node));
-//	third = (struct Node*)malloc(sizeof(struct Node));
-//	fourth = (struct Node*)malloc(sizeof(struct Node));
+	third = (struct Node*)malloc(sizeof(struct Node));
+	fourth = (struct Node*)malloc(sizeof(struct Node));
 	
 	head->data = 5;
 	head->next = second;
 
-	second->data = (head->data * 3);
-	second->next = NULL;
+	second->data = (head->data * 5);
+	second->next = third;
+
+	third->data = (second->data * 5);
+	third->next = fourth;
+
+	fourth->data = (third->data * 5);
+	fourth->next = NULL;
 
 	printList(head);
 }
