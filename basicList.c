@@ -6,7 +6,7 @@
 /*   By: gpanyana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 02:22:14 by gpanyana          #+#    #+#             */
-/*   Updated: 2019/07/29 16:36:13 by gpanyana         ###   ########.fr       */
+/*   Updated: 2019/08/12 14:26:50 by gpanyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-typedef struct Node
+typedef struct	Node
 {
 	int			data;
-	struct		Node* next;	
-}basic;	
+	struct Node	*next;	
+}				t_list;	
 
 void	printList(struct Node* n)
 {
